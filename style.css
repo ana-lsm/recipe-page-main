@@ -1,0 +1,177 @@
+:root {
+  --clr-headings: hsl(14, 45%, 36%);
+  --clr-headings3: hsl(332, 51%, 32%);
+  --clr-bg-card: hsl(0, 0%, 100%);
+  --clr-bg-prep: hsl(330, 100%, 98%);
+  --clr-neutral-light3: hsl(30, 54%, 90%);
+  --clr-base: hsl(30, 18%, 87%);
+  --clr-title: hsl(30, 10%, 34%);
+  --clr-brown: hsl(24, 5%, 18%);
+
+  --ff-base: "Outfit", sans-serif;
+  --ff-accent: "Young Serif", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: var(--ff-accent);
+  color: var(--clr-headings);
+  font-weight: var(--fw-semi-bold);
+}
+
+body {
+  width: 100%;
+  max-width: 90rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  background-color: var(--clr-neutral-light3);
+  display: grid;
+  place-content: center;
+  margin-top: 2rem;
+  color: var(--clr-title);
+}
+
+.card {
+  background-color: var(--clr-bg-card);
+  width: 592px;
+  border-radius: 1rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+}
+
+img {
+  width: 100%;
+  height: 14rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header .title {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-semi-bold);
+  font-size: 1.5rem;
+  align-self: flex-start;
+  color: var(--clr-brown);
+  margin-top: 1.5rem;
+}
+
+header .summary {
+  color: var(--clr-title);
+  font-size: 0.8rem;
+  font-weight: var(--fw-semi-bold);
+  margin-top: 1rem;
+  line-height: 1.125;
+}
+
+.prep {
+  background-color: var(--clr-bg-prep);
+  display: grid;
+  width: 100%;
+  margin-inline: auto;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+}
+
+.prep h3 {
+  color: var(--clr-headings3);
+  font-size: 1rem;
+}
+
+.prep ul {
+  padding-left: 1.125rem;
+}
+
+li {
+  padding-left: 0.5rem;
+}
+
+li::marker {
+  color: var(--clr-headings3);
+  font-weight: var(--fw-semi-bold);
+  font-family: var(--clr-base);
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
+
+.ingredients ul {
+  padding-left: 1.125rem;
+}
+
+.ingredients h2 {
+  margin-bottom: 1rem;
+}
+
+.instructions ol {
+  padding-left: 1.125rem;
+}
+
+.instructions h2 {
+  margin-bottom: 1.5rem;
+}
+
+.nutrition {
+  display: grid;
+  row-gap: 1rem;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--clr-base);
+}
+
+tr:last-child {
+  border: none;
+}
+
+[data-cell="nutrient"] {
+  padding-left: 1.5rem;
+}
+
+[data-cell="nutrient-value"] {
+  color: var(--clr-headings3);
+  font-weight: var(--fw-bold);
+}
+
+hr {
+  outline: none;
+  border: none;
+  height: 1px;
+  background: var(--clr-base);
+}
+
+footer {
+  bottom: 0.5rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
